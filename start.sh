@@ -1,11 +1,17 @@
 #!/bin/bash
 set -e
 
-CATEGORY="${1:-general}"
-TASK_INPUT="${2:-task}"
+REPO_DIR="$HOME/daily-practice"
+
+echo "=== ДАСГАЛ ЭХЛҮҮЛЭХ ==="
+read -p "Хэлний төрөл (bash, python, java...) [bash]: " CATEGORY
+CATEGORY="${CATEGORY:-bash}"
+
+read -p "Дасгалын нэр [task]: " TASK_INPUT
+TASK_INPUT="${TASK_INPUT:-task}"
 
 TODAY=$(date "+%Y-%m-%d")
-BASE_DIR="$CATEGORY/$TODAY"
+BASE_DIR="$REPO_DIR/$CATEGORY/$TODAY"
 mkdir -p "$BASE_DIR"
 
 TARGET_DIR="$BASE_DIR/$TASK_INPUT"
@@ -17,9 +23,8 @@ while [ -d "$TARGET_DIR" ]; do
 done
 
 mkdir -p "$TARGET_DIR"
-echo "$TARGET_DIR" > .current_task
+echo "$TARGET_DIR" > "$REPO_DIR/.current_task"
 
 echo "--------------------------------------------------"
-echo "✅ Ангилал: [$CATEGORY] | Ажиллах талбар: $TARGET_DIR"
-echo "👉 Орох команд: cd $TARGET_DIR"
+echo "✅ Ажиллах талбар бэлэн: $TARGET_DIR"
 echo "--------------------------------------------------"
