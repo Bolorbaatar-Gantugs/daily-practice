@@ -1,0 +1,2 @@
+/home/aether/daily-practice/workspace/storage/data
+/home/aether/daily-practice/workspace/live
