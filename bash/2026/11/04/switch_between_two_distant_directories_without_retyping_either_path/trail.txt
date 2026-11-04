@@ -1,0 +1,3 @@
+/home/aether/daily-practice/workspace/project/backend/configs
+/home/aether/daily-practice/workspace/system/logs
+/home/aether/daily-practice/workspace/project/backend/configs
