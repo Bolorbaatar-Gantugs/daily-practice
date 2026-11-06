@@ -1,0 +1,2 @@
+mkdir -p site/assetscd site/assets
+pwd > rel.txt
