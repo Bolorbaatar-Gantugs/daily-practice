@@ -1,0 +1,5 @@
+error: unexpected argument 'extra_word' found
+
+Usage: pwd [OPTION]...
+
+For more information, try '--help'.
